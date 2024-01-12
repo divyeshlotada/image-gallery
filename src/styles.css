@@ -1,0 +1,145 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+main#m1{
+    margin-top: 60px;
+    margin-bottom: 50px;
+    min-height: 80vh;
+}
+
+header{
+    /* border: 1px solid red; */
+    color:white;
+    width:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+header nav{
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    /* gap:10px; */
+    background-color: lightslategray;
+}
+
+/* p{
+    border: 1px solid white;
+    display: inline-block;
+} */
+
+nav div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+
+div a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 1px solid green; */
+    width: 50%;
+    padding:15px 10px 0; 
+    gap:20px;
+}
+
+div#d2{
+    /* border:1px solid red; */
+    justify-content: flex-end;
+    width:50%;
+    /* position: relative; */
+    gap:0;
+}
+
+#search{
+    width: 50%;
+    /* position: absolute; */
+}
+
+/* #search:hover{
+    cursor: pointer;
+} */
+
+ul li{
+    list-style-type: none;
+}
+
+ul a{
+    text-decoration: none;
+    color:white;
+    letter-spacing: 0.4px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+ul a:hover{
+    text-decoration: none;
+    color:rgb(55, 55, 55);
+}
+
+footer{
+    /* background-color: lightslategray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    /* position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0; */
+}
+
+
+@media (max-width:768px){
+    header nav{
+        flex-direction: column;
+        /* gap:5px; */
+    }
+
+    main#m1{
+        margin-top: 140px;
+    }
+
+    ul{
+        width:100%;
+        justify-content: center;
+    }
+
+    div#d2{
+        /* border:1px solid red; */
+        justify-content: center;
+        width:100%;
+    }
+    
+    #search{
+        width: 80%;
+        /* position: absolute; */
+    }
+
+    ul{
+        padding: 5px 10px 0; 
+        gap:10px;
+    }
+}

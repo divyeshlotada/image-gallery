@@ -1,0 +1,55 @@
+<!-- <p>imggallery works!</p> -->
+<!-- <header class="mb-5">
+    <nav>
+        <div>
+            <img src="../../../assets/logo 2.png" width="35px" alt="logo">
+            <a href="#" >ImgGal</a>
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div id="d2" class="my-2">
+            <input type="search" class="form-control mx-1" id="search" placeholder="Search photos here..." [(ngModel)]="searchText">
+            <button type="button" class="btn btn-light d-flex justify-content-center align-items-center">
+                <img src="../../../assets/search 2.png" class="img-fluid" width="24px" alt="search"></button>
+        </div>
+    </nav>
+</header> -->
+
+<app-header (searchevent)="fromchild($event)"></app-header>
+
+<main id="m1">
+    <div class="container-sm-fluid container-md mt-5">
+
+        <div *ngIf="error" class="error">
+            <h1 class="text-danger text-center my-3">{{error}}</h1>
+        </div>
+
+        <div class="row gap-3 gap-md-0 my-2 justify-content-sm-center justify-content-md-start">
+            <div class="col-sm-5 col-md-4 my-3" *ngFor="let img of emp | searchpipe : searchText">
+                <div class="card bg-dark h-100" >
+                    <div class="card-header px-0 py-0">
+                        <img src="{{img.img1}}" alt="img1" class="img-fluid rounded-top">
+                    </div>
+                    <div class="card-body text-center px-0 py-1 text-white">
+                        <h6>{{img.name}}</h6>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="{{img.img1}}" download="img1"><input type="button" value="View" class="btn btn-primary text-white mx-1"></a>
+                        <a href="{{img.path}}" download="img1"><input type="button" value="Download" class="btn btn-success text-white mx-1"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- <img src="../../../assets/car2.jpg"> -->
+
+<footer class="text-center text-white bg-dark py-2">
+    <p class="my-0">ImgGal Copyright &copy; All rights reserved</p>
+</footer>

@@ -1,0 +1,21 @@
+<!-- <p>header works!</p> -->
+<header class="mb-5">
+    <nav>
+        <div>
+            <img src="../../../assets/logo 2.png" width="35px" alt="logo">
+            <a href="#" >ImgGal</a>
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div id="d2" class="my-2">
+            <input type="search" class="form-control mx-1" id="search" placeholder="Search photos here..." [(ngModel)]="searchText" #search>
+            <button type="button" class="btn btn-light d-flex justify-content-center align-items-center" (click)="send_to_parent(search)">
+                <img src="../../../assets/search 2.png" class="img-fluid" width="24px" alt="search" ></button>
+        </div>
+    </nav>
+</header>
